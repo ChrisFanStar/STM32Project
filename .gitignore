@@ -1,0 +1,8 @@
+**/*.log
+*/*/*.zip
+
+**/Debug/
+**/build/
+
+**/Listings/
+**/Objects/
