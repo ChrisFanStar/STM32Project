@@ -65,45 +65,46 @@ struct tm settingTime;
  * @details 在设置模式下增加当前选中的时间项的值
  */
 void onKnobForward(){
-	char message[] = "Forward";
-	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
-	if (calendarState == CalendarState_Setting){
-		switch (settingState){
-		case Year:
-			settingTime.tm_year++;
-			break;
-		case Month:
-			settingTime.tm_mon++;
-			if (settingTime.tm_mon > 11){
-				settingTime.tm_mon = 0;
-			}
-			break;
-		case Day:
-			settingTime.tm_mday++;
-			if (settingTime.tm_mday > 31){
-				settingTime.tm_mday = 1;
-			}
-			break;
-		case Hour:
-			settingTime.tm_hour++;
-			if (settingTime.tm_hour > 23){
-				settingTime.tm_hour = 0;
-			}
-			break;
-		case Minute:
-			settingTime.tm_min++;
-			if (settingTime.tm_min > 59){
-				settingTime.tm_min = 0;
-			}
-			break;
-		case Second:
-			settingTime.tm_sec++;
-			if (settingTime.tm_sec > 59){
-				settingTime.tm_sec = 0;
-			}
-			break;
-		}
-	}
+//    OLED_ShowString(0,0,"UNICORN_LI",16, 1);
+//	char message[] = "Forward";
+//	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
+//	if (calendarState == CalendarState_Setting){
+//		switch (settingState){
+//		case Year:
+//			settingTime.tm_year++;
+//			break;
+//		case Month:
+//			settingTime.tm_mon++;
+//			if (settingTime.tm_mon > 11){
+//				settingTime.tm_mon = 0;
+//			}
+//			break;
+//		case Day:
+//			settingTime.tm_mday++;
+//			if (settingTime.tm_mday > 31){
+//				settingTime.tm_mday = 1;
+//			}
+//			break;
+//		case Hour:
+//			settingTime.tm_hour++;
+//			if (settingTime.tm_hour > 23){
+//				settingTime.tm_hour = 0;
+//			}
+//			break;
+//		case Minute:
+//			settingTime.tm_min++;
+//			if (settingTime.tm_min > 59){
+//				settingTime.tm_min = 0;
+//			}
+//			break;
+//		case Second:
+//			settingTime.tm_sec++;
+//			if (settingTime.tm_sec > 59){
+//				settingTime.tm_sec = 0;
+//			}
+//			break;
+//		}
+//	}
 }
 
 /**
@@ -111,48 +112,50 @@ void onKnobForward(){
  * @details 在设置模式下减少当前选中的时间项的值
  */
 void onKnobBackward(){
-	char message[] = "Backward";
-	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
-	if (calendarState == CalendarState_Setting){
-		switch (settingState){
-		case Year:
-			settingTime.tm_year--;
-			if (settingTime.tm_year < 70){
-				settingTime.tm_year = 70;
-			}
-			break;
-		case Month:
-			settingTime.tm_mon--;
-			if (settingTime.tm_mon < 0){
-				settingTime.tm_mon = 11;
-			}
-			break;
-		case Day:
-			settingTime.tm_mday--;
-			if (settingTime.tm_mday < 0){
-				settingTime.tm_mday = 31;
-			}
-			break;
-		case Hour:
-			settingTime.tm_hour--;
-			if (settingTime.tm_hour < 0){
-				settingTime.tm_hour = 23;
-			}
-			break;
-		case Minute:
-			settingTime.tm_min--;
-			if (settingTime.tm_min < 0){
-				settingTime.tm_min = 59;
-			}
-			break;
-		case Second:
-			settingTime.tm_sec--;
-			if (settingTime.tm_sec < 0){
-				settingTime.tm_sec = 59;
-			}
-			break;
-		}
-	}
+
+    OLED_ShowString(0,0,"UNICORN_LI",16, 1);
+//	char message[] = "Backward";
+//	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
+//	if (calendarState == CalendarState_Setting){
+//		switch (settingState){
+//		case Year:
+//			settingTime.tm_year--;
+//			if (settingTime.tm_year < 70){
+//				settingTime.tm_year = 70;
+//			}
+//			break;
+//		case Month:
+//			settingTime.tm_mon--;
+//			if (settingTime.tm_mon < 0){
+//				settingTime.tm_mon = 11;
+//			}
+//			break;
+//		case Day:
+//			settingTime.tm_mday--;
+//			if (settingTime.tm_mday < 0){
+//				settingTime.tm_mday = 31;
+//			}
+//			break;
+//		case Hour:
+//			settingTime.tm_hour--;
+//			if (settingTime.tm_hour < 0){
+//				settingTime.tm_hour = 23;
+//			}
+//			break;
+//		case Minute:
+//			settingTime.tm_min--;
+//			if (settingTime.tm_min < 0){
+//				settingTime.tm_min = 59;
+//			}
+//			break;
+//		case Second:
+//			settingTime.tm_sec--;
+//			if (settingTime.tm_sec < 0){
+//				settingTime.tm_sec = 59;
+//			}
+//			break;
+//		}
+//	}
 }
 
 /**
@@ -184,31 +187,63 @@ void onKnobPressed(){
 void showTime(struct tm* time){
 	char str[30];
 	sprintf(str, "%d-%02d-%02d", time->tm_year + 1900, time->tm_mon + 1, time->tm_mday);
-	OLED_PrintASCIIString(24, 0, str, &afont16x8, OLED_COLOR_NORMAL);
+//	OLED_PrintASCIIString(24, 0, str, &afont16x8, OLED_COLOR_NORMAL);
+    OLED_ShowString(0,0,str,16,0);
 
 	sprintf(str, "%02d:%02d:%02d", time->tm_hour, time->tm_min, time->tm_sec);
-	OLED_PrintASCIIString(16, 20, str, &afont24x12, OLED_COLOR_NORMAL);
+//	OLED_PrintASCIIString(16, 20, str, &afont24x12, OLED_COLOR_NORMAL);
+    OLED_ShowString(0,2,str,16,0);
 
 	char* week = weeks[time->tm_wday];
 	uint8_t x_week = (128 - (strlen(week) * 8)) / 2;
-	OLED_PrintASCIIString(x_week, 48, week, &afont16x8, OLED_COLOR_NORMAL);
+//	OLED_PrintASCIIString(x_week, 48, week, &afont16x8, OLED_COLOR_NORMAL);
+    OLED_ShowString(0,4,week,16,0);
 }
 
 /**
  * @brief 显示光标函数
  * @details 在设置模式下显示闪烁的光标，指示当前正在设置的时间项
  */
-void showCursor(){
-	static uint32_t startTime = 0;
-	uint32_t difftime = HAL_GetTick() - startTime;
-	if (difftime > 2 * CURSOR_FLASH_INTERVAL){
-		startTime = HAL_GetTick();
-	}else if (difftime > CURSOR_FLASH_INTERVAL){
-		CursorPosition position = cursorPositions[settingState];
-		OLED_DrawLine(position.x1, position.y1, position.x2, position.y2, OLED_COLOR_NORMAL);
-	}
-}
+/**
+ * @brief 显示闪烁光标（适配OLED_ShowChar接口）
+ * @note 坐标系统：x(0-127像素), y(0-7页，每页8行)
+ */
+void showCursor() {
+    static uint8_t visible = 0;
+    static uint32_t last_tick = 0;
 
+    if (HAL_GetTick() - last_tick > CURSOR_FLASH_INTERVAL) {
+        visible = !visible;
+        last_tick = HAL_GetTick();
+
+        CursorPosition pos = cursorPositions[settingState];
+
+        // 通过反色重绘字符实现光标效果
+        char str[3];
+        switch(settingState) {
+            case Year:
+                sprintf(str, "%04d", settingTime.tm_year  + 1900);
+                OLED_ShowString(pos.x1/8, pos.y1/8, str, 16, visible);
+                break;
+            case Month:
+                sprintf(str, "%02d", settingTime.tm_mon  + 1);
+                OLED_ShowString(pos.x1/8, pos.y1/8, str, 16, visible);
+                break;
+            case Day:
+                sprintf(str, "%02d", settingTime.tm_mday);
+                OLED_ShowString(pos.x1/8, pos.y1/8, str, 16, visible);
+                break;
+            case Hour:
+            case Minute:
+            case Second:
+                sprintf(str, "%02d",
+                        settingState == Hour ? settingTime.tm_hour  :
+                        (settingState == Minute ? settingTime.tm_min  : settingTime.tm_sec));
+                OLED_ShowString(pos.x1/12, pos.y1/8, str, 16, visible);
+                break;
+        }
+    }
+}
 /**
  * @brief 主任务初始化函数
  * @details 初始化OLED、RTC和旋钮，设置旋钮回调函数
@@ -229,15 +264,16 @@ void MainTaskInit(){
  */
 void MainTask(){
 	Knob_Loop();
-	OLED_NewFrame();
+//	OLED_NewFrame();
+//    OLED_Clear();  // 每帧清屏
+//
+//	if (calendarState == CalendarState_Normal){
+//		struct tm* now = KK_RTC_GetTime();
+//		showTime(now);
+//	}else{
+//		showTime(&settingTime);
+////		showCursor();
+//	}
 
-	if (calendarState == CalendarState_Normal){
-		struct tm* now = KK_RTC_GetTime();
-		showTime(now);
-	}else{
-		showTime(&settingTime);
-		showCursor();
-	}
-
-	OLED_ShowFrame();
+//	OLED_ShowFrame();
 }

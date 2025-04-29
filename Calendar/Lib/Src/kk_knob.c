@@ -98,12 +98,16 @@ void Knob_Init(){
  */
 void Knob_Loop(){
 	uint32_t counter = getCounter();
+//    OLED_ShowString(0,2,"UNICORN_LI",16, 1);
+//    OLED_ShowNum(48,4,counter,6,16, 0);
 	if (counter > COUNTER_INIT_VALUE){
 		// 正转
 		if (onForwardCallback != NULL){
 			onForwardCallback();
 		}
 	}else if (counter < COUNTER_INIT_VALUE){
+//        OLED_ShowString(0,2,"UNICORN_LI",16, 1);
+//        OLED_ShowNum(48,4,counter,6,16, 0);
 		// 反转
 		if (onBackwardCallback != NULL){
 			onBackwardCallback();
@@ -116,6 +120,7 @@ void Knob_Loop(){
 	static uint32_t pressedTime = 0;
 
 	if (btnState == Pressed){
+        OLED_ShowString(0,2,"UNICORN_LI",16, 1);
 		if (pressedTime == 0){
 			pressedTime = getTick();
 		}else if (callbackState == 0 && getTick() - pressedTime > BTN_DEBOUNCE_TICKS){

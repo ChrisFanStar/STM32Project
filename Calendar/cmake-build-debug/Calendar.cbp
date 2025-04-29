@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Calendar"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Calendar.elf">
+				<Option output="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Calendar.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F103xB"/>
+					<Add option="-DUSE_FULL_LL_DRIVER"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/App/Inc"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1/arm-none-eabi"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1/backward"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/include"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/include-fixed"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 Calendar.elf"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Calendar.elf/fast">
+				<Option output="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Calendar.elf" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DDEBUG"/>
+					<Add option="-DUSE_HAL_DRIVER"/>
+					<Add option="-DSTM32F103xB"/>
+					<Add option="-DUSE_FULL_LL_DRIVER"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/App/Inc"/>
+					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1/arm-none-eabi"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include/c++/14.2.1/backward"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/include"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/include-fixed"/>
+					<Add directory="/Applications/ArmGNUToolchain/14.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 Calendar.elf/fast"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j10 -f &quot;/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/App/Inc/task_main.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/App/Src/task_main.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc/gpio.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc/i2c.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc/main.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc/rtc.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc/stm32f1xx_hal_conf.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc/stm32f1xx_it.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc/tim.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc/usart.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/gpio.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/i2c.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/main.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/rtc.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/stm32f1xx_hal_msp.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/stm32f1xx_it.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/syscalls.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/sysmem.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/system_stm32f1xx.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/tim.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Src/usart.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Startup/startup_stm32f103c8tx.s">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/LICENSE.txt">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/cmsis_armcc.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/cmsis_armclang.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/cmsis_compiler.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/cmsis_gcc.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/cmsis_iccarm.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/cmsis_version.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_armv8mbl.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_armv8mml.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_cm0.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_cm0plus.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_cm1.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_cm23.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_cm3.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_cm33.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_cm4.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_cm7.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_sc000.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/core_sc300.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/mpu_armv7.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/mpu_armv8.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include/tz_context.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/LICENSE.txt">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_i2c.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_bus.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_cortex.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_dma.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_exti.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_gpio.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_i2c.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_pwr.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rcc.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_rtc.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_system.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_tim.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_usart.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_ll_utils.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/LICENSE.txt">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_i2c.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rtc_ex.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc/font.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc/kk_knob.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc/kk_rtc.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc/oled.h">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Src/font.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Src/kk_knob.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Src/kk_rtc.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Src/oled.c">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/STM32F103C8TX_FLASH.ld">
+			<Option target="Calendar.elf"/>
+		</Unit>
+		<Unit filename="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

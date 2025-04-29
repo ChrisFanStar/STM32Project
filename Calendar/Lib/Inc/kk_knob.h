@@ -2,6 +2,7 @@
 #define INC_KK_KNOB_H_
 
 #include "tim.h"
+#include "oled.h"
 
 typedef void (*KnobCallback)(void);
 

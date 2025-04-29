@@ -20,11 +20,26 @@
 /* Includes ------------------------------------------------------------------*/
 #include "usart.h"
 
+
+
 /* USER CODE BEGIN 0 */
 
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart2;
+
+
+/* USER CODE BEGIN PV */
+#ifdef __GNUC__
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#else
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#endif
+PUTCHAR_PROTOTYPE
+{
+    HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
+    return ch;
+}
 
 /* USART2 init function */
 

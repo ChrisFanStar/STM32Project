@@ -1,0 +1,45 @@
+/Users/fanjia/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/bin/arm-none-eabi-gcc-14.2.0 -DCMAKE_CXX_COMPILER=/opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/bin/arm-none-eabi-cpp -G "CodeBlocks - Unix Makefiles" -S /Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar -B /Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+-- Minimal optimization, debug info included
+-- Configuring done (0.0s)
+You have changed variables that require your cache to be deleted.
+Configure will be re-run and you may have to reset some variables.
+The following variables have changed:
+CMAKE_C_COMPILER= /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/bin/arm-none-eabi-gcc-14.2.0
+CMAKE_CXX_COMPILER= /opt/homebrew/Cellar/arm-none-eabi-gcc/14.2.0/bin/arm-none-eabi-cpp
+
+CMake Deprecation Warning:
+  Support for "Extra Generators" like
+
+    CodeBlocks
+
+  is deprecated and will be removed from a future version of CMake.  IDEs may
+  use the cmake-file-api(7) to view CMake-generated project build trees.
+
+
+-- The C compiler identification is GNU 14.2.1
+-- The CXX compiler identification is GNU 14.2.1
+-- The ASM compiler identification is GNU
+-- Found assembler: /opt/homebrew/bin/arm-none-eabi-gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /opt/homebrew/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /opt/homebrew/bin/arm-none-eabi-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Minimal optimization, debug info included
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug

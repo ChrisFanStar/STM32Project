@@ -1,0 +1,3 @@
+/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/CMakeFiles/Calendar.elf.dir
+/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/CMakeFiles/rebuild_cache.dir
