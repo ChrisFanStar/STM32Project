@@ -65,46 +65,46 @@ struct tm settingTime;
  * @details 在设置模式下增加当前选中的时间项的值
  */
 void onKnobForward(){
-//    OLED_ShowString(0,0,"UNICORN_LI",16, 1);
-//	char message[] = "Forward";
-//	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
-//	if (calendarState == CalendarState_Setting){
-//		switch (settingState){
-//		case Year:
-//			settingTime.tm_year++;
-//			break;
-//		case Month:
-//			settingTime.tm_mon++;
-//			if (settingTime.tm_mon > 11){
-//				settingTime.tm_mon = 0;
-//			}
-//			break;
-//		case Day:
-//			settingTime.tm_mday++;
-//			if (settingTime.tm_mday > 31){
-//				settingTime.tm_mday = 1;
-//			}
-//			break;
-//		case Hour:
-//			settingTime.tm_hour++;
-//			if (settingTime.tm_hour > 23){
-//				settingTime.tm_hour = 0;
-//			}
-//			break;
-//		case Minute:
-//			settingTime.tm_min++;
-//			if (settingTime.tm_min > 59){
-//				settingTime.tm_min = 0;
-//			}
-//			break;
-//		case Second:
-//			settingTime.tm_sec++;
-//			if (settingTime.tm_sec > 59){
-//				settingTime.tm_sec = 0;
-//			}
-//			break;
-//		}
-//	}
+    OLED_ShowString(0,0,"112",16, 1);
+	char message[] = "Forward";
+	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
+	if (calendarState == CalendarState_Setting){
+		switch (settingState){
+		case Year:
+			settingTime.tm_year++;
+			break;
+		case Month:
+			settingTime.tm_mon++;
+			if (settingTime.tm_mon > 11){
+				settingTime.tm_mon = 0;
+			}
+			break;
+		case Day:
+			settingTime.tm_mday++;
+			if (settingTime.tm_mday > 31){
+				settingTime.tm_mday = 1;
+			}
+			break;
+		case Hour:
+			settingTime.tm_hour++;
+			if (settingTime.tm_hour > 23){
+				settingTime.tm_hour = 0;
+			}
+			break;
+		case Minute:
+			settingTime.tm_min++;
+			if (settingTime.tm_min > 59){
+				settingTime.tm_min = 0;
+			}
+			break;
+		case Second:
+			settingTime.tm_sec++;
+			if (settingTime.tm_sec > 59){
+				settingTime.tm_sec = 0;
+			}
+			break;
+		}
+	}
 }
 
 /**
@@ -112,50 +112,49 @@ void onKnobForward(){
  * @details 在设置模式下减少当前选中的时间项的值
  */
 void onKnobBackward(){
-
-    OLED_ShowString(0,0,"UNICORN_LI",16, 1);
-//	char message[] = "Backward";
-//	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
-//	if (calendarState == CalendarState_Setting){
-//		switch (settingState){
-//		case Year:
-//			settingTime.tm_year--;
-//			if (settingTime.tm_year < 70){
-//				settingTime.tm_year = 70;
-//			}
-//			break;
-//		case Month:
-//			settingTime.tm_mon--;
-//			if (settingTime.tm_mon < 0){
-//				settingTime.tm_mon = 11;
-//			}
-//			break;
-//		case Day:
-//			settingTime.tm_mday--;
-//			if (settingTime.tm_mday < 0){
-//				settingTime.tm_mday = 31;
-//			}
-//			break;
-//		case Hour:
-//			settingTime.tm_hour--;
-//			if (settingTime.tm_hour < 0){
-//				settingTime.tm_hour = 23;
-//			}
-//			break;
-//		case Minute:
-//			settingTime.tm_min--;
-//			if (settingTime.tm_min < 0){
-//				settingTime.tm_min = 59;
-//			}
-//			break;
-//		case Second:
-//			settingTime.tm_sec--;
-//			if (settingTime.tm_sec < 0){
-//				settingTime.tm_sec = 59;
-//			}
-//			break;
-//		}
-//	}
+    OLED_ShowString(0,0,"224",16, 1);
+	char message[] = "Backward";
+	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
+	if (calendarState == CalendarState_Setting){
+		switch (settingState){
+		case Year:
+			settingTime.tm_year--;
+			if (settingTime.tm_year < 70){
+				settingTime.tm_year = 70;
+			}
+			break;
+		case Month:
+			settingTime.tm_mon--;
+			if (settingTime.tm_mon < 0){
+				settingTime.tm_mon = 11;
+			}
+			break;
+		case Day:
+			settingTime.tm_mday--;
+			if (settingTime.tm_mday < 0){
+				settingTime.tm_mday = 31;
+			}
+			break;
+		case Hour:
+			settingTime.tm_hour--;
+			if (settingTime.tm_hour < 0){
+				settingTime.tm_hour = 23;
+			}
+			break;
+		case Minute:
+			settingTime.tm_min--;
+			if (settingTime.tm_min < 0){
+				settingTime.tm_min = 59;
+			}
+			break;
+		case Second:
+			settingTime.tm_sec--;
+			if (settingTime.tm_sec < 0){
+				settingTime.tm_sec = 59;
+			}
+			break;
+		}
+	}
 }
 
 /**
@@ -163,6 +162,7 @@ void onKnobBackward(){
  * @details 在普通模式下进入设置模式，在设置模式下切换设置项或保存设置
  */
 void onKnobPressed(){
+//    OLED_ShowString(0,0,"1234321",16, 1);
 	char message[] = "Pressed";
 	HAL_UART_Transmit(&huart2, (uint8_t*)message, strlen(message), HAL_MAX_DELAY);
 	if (calendarState == CalendarState_Normal){
@@ -265,15 +265,15 @@ void MainTaskInit(){
 void MainTask(){
 	Knob_Loop();
 //	OLED_NewFrame();
-//    OLED_Clear();  // 每帧清屏
+    OLED_Clear();  // 每帧清屏
 //
-//	if (calendarState == CalendarState_Normal){
-//		struct tm* now = KK_RTC_GetTime();
-//		showTime(now);
-//	}else{
-//		showTime(&settingTime);
-////		showCursor();
-//	}
+	if (calendarState == CalendarState_Normal){
+		struct tm* now = KK_RTC_GetTime();
+		showTime(now);
+	}else{
+		showTime(&settingTime);
+//		showCursor();
+	}
 
 //	OLED_ShowFrame();
 }

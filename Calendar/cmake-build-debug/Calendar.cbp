@@ -27,7 +27,8 @@
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F103xB"/>
-					<Add option="-DUSE_FULL_LL_DRIVER"/>
+					<Add option="-DHAL_ADC_MODULE_DISABLED"/>
+					<Add option="-DHAL_CAN_MODULE_DISABLED"/>
 					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc"/>
 					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
 					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc"/>
@@ -59,7 +60,8 @@
 					<Add option="-DDEBUG"/>
 					<Add option="-DUSE_HAL_DRIVER"/>
 					<Add option="-DSTM32F103xB"/>
-					<Add option="-DUSE_FULL_LL_DRIVER"/>
+					<Add option="-DHAL_ADC_MODULE_DISABLED"/>
+					<Add option="-DHAL_CAN_MODULE_DISABLED"/>
 					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc"/>
 					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"/>
 					<Add directory="/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc"/>

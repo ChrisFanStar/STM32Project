@@ -28,67 +28,79 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 64,
+				"line" : 81,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 60,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
-				"file" : 0,
-				"line" : 61,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 62,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 29,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 30,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
 				"file" : 0,
 				"line" : 36,
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 74,
+				"parent" : 0
+			},
+			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 49,
+				"line" : 22,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 24,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 35,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 54,
-				"parent" : 0
-			},
-			{
-				"command" : 3,
-				"file" : 0,
-				"line" : 69,
+				"line" : 60,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 52,
+				"line" : 49,
 				"parent" : 0
 			}
 		]
@@ -99,19 +111,11 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-std=gnu11 -fdiagnostics-color=always"
+					"fragment" : "-std=gnu11 -fdiagnostics-color=always   --specs=nano.specs"
 				},
 				{
 					"backtrace" : 5,
-					"fragment" : "-mcpu=cortex-m3"
-				},
-				{
-					"backtrace" : 5,
-					"fragment" : "-mthumb"
-				},
-				{
-					"backtrace" : 5,
-					"fragment" : "-mthumb-interwork"
+					"fragment" : "-Os"
 				},
 				{
 					"backtrace" : 6,
@@ -130,61 +134,85 @@
 					"fragment" : "-fmessage-length=0"
 				},
 				{
-					"backtrace" : 8,
-					"fragment" : "-Og"
+					"backtrace" : 7,
+					"fragment" : "-fno-unwind-tables"
+				},
+				{
+					"backtrace" : 7,
+					"fragment" : "-fno-asynchronous-unwind-tables"
 				},
 				{
 					"backtrace" : 8,
-					"fragment" : "-g"
+					"fragment" : "-flto"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mcpu=cortex-m3"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mthumb-interwork"
+				},
+				{
+					"backtrace" : 11,
+					"fragment" : "-fno-builtin"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 12,
 					"define" : "DEBUG"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 12,
+					"define" : "HAL_ADC_MODULE_DISABLED"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "HAL_CAN_MODULE_DISABLED"
+				},
+				{
+					"backtrace" : 12,
 					"define" : "STM32F103xB"
 				},
 				{
-					"backtrace" : 10,
-					"define" : "USE_FULL_LL_DRIVER"
-				},
-				{
-					"backtrace" : 9,
+					"backtrace" : 12,
 					"define" : "USE_HAL_DRIVER"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/App/Inc"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc"
 				}
 			],
@@ -238,16 +266,11 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"backtrace" : 5,
-					"fragment" : "-mcpu=cortex-m3"
+					"fragment" : "  --specs=nano.specs"
 				},
 				{
 					"backtrace" : 5,
-					"fragment" : "-mthumb"
-				},
-				{
-					"backtrace" : 5,
-					"fragment" : "-mthumb-interwork"
+					"fragment" : "-Os"
 				},
 				{
 					"backtrace" : 6,
@@ -267,68 +290,92 @@
 				},
 				{
 					"backtrace" : 7,
-					"fragment" : "-x"
+					"fragment" : "-fno-unwind-tables"
 				},
 				{
 					"backtrace" : 7,
+					"fragment" : "-fno-asynchronous-unwind-tables"
+				},
+				{
+					"backtrace" : 8,
+					"fragment" : "-flto"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mcpu=cortex-m3"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mthumb"
+				},
+				{
+					"backtrace" : 9,
+					"fragment" : "-mthumb-interwork"
+				},
+				{
+					"backtrace" : 10,
+					"fragment" : "-x"
+				},
+				{
+					"backtrace" : 10,
 					"fragment" : "assembler-with-cpp"
 				},
 				{
-					"backtrace" : 8,
-					"fragment" : "-Og"
-				},
-				{
-					"backtrace" : 8,
-					"fragment" : "-g"
+					"backtrace" : 11,
+					"fragment" : "-fno-builtin"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 12,
 					"define" : "DEBUG"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 12,
+					"define" : "HAL_ADC_MODULE_DISABLED"
+				},
+				{
+					"backtrace" : 12,
+					"define" : "HAL_CAN_MODULE_DISABLED"
+				},
+				{
+					"backtrace" : 12,
 					"define" : "STM32F103xB"
 				},
 				{
-					"backtrace" : 10,
-					"define" : "USE_FULL_LL_DRIVER"
-				},
-				{
-					"backtrace" : 9,
+					"backtrace" : 12,
 					"define" : "USE_HAL_DRIVER"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/App/Inc"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 13,
 					"path" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc"
 				}
 			],
@@ -350,7 +397,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "-Wl,-gc-sections,--print-memory-usage,-Map=/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Calendar.map",
+				"fragment" : "-flto",
 				"role" : "flags"
 			},
 			{
@@ -370,6 +417,21 @@
 			},
 			{
 				"backtrace" : 4,
+				"fragment" : "-Wl,--gc-sections",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,--print-memory-usage",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
+				"fragment" : "-Wl,-Map=/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug/Calendar.map",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 4,
 				"fragment" : "-T",
 				"role" : "flags"
 			},
@@ -377,6 +439,16 @@
 				"backtrace" : 4,
 				"fragment" : "/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/STM32F103C8TX_FLASH.ld",
 				"role" : "flags"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-lc_nano",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 1,
+				"fragment" : "-lnosys",
+				"role" : "libraries"
 			}
 		],
 		"language" : "C"

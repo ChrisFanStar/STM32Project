@@ -3,15 +3,15 @@
 
 # compile ASM with /opt/homebrew/bin/arm-none-eabi-gcc
 # compile C with /opt/homebrew/bin/arm-none-eabi-gcc
-ASM_DEFINES = -DDEBUG -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
+ASM_DEFINES = -DDEBUG -DHAL_ADC_MODULE_DISABLED -DHAL_CAN_MODULE_DISABLED -DSTM32F103xB -DUSE_HAL_DRIVER
 
 ASM_INCLUDES = -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/App/Inc -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc
 
-ASM_FLAGS = -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -x assembler-with-cpp -Og -g
+ASM_FLAGS =   --specs=nano.specs -Os -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -fno-unwind-tables -fno-asynchronous-unwind-tables -flto -mcpu=cortex-m3 -mthumb -mthumb-interwork -x assembler-with-cpp -fno-builtin
 
-C_DEFINES = -DDEBUG -DSTM32F103xB -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER
+C_DEFINES = -DDEBUG -DHAL_ADC_MODULE_DISABLED -DHAL_CAN_MODULE_DISABLED -DSTM32F103xB -DUSE_HAL_DRIVER
 
 C_INCLUDES = -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Core/Inc -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/STM32F1xx_HAL_Driver/Inc -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Device/ST/STM32F1xx/Include -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Drivers/CMSIS/Include -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/App/Inc -I/Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/Lib/Inc
 
-C_FLAGS = -std=gnu11 -fdiagnostics-color=always -mcpu=cortex-m3 -mthumb -mthumb-interwork -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -Og -g
+C_FLAGS = -std=gnu11 -fdiagnostics-color=always   --specs=nano.specs -Os -ffunction-sections -fdata-sections -fno-common -fmessage-length=0 -fno-unwind-tables -fno-asynchronous-unwind-tables -flto -mcpu=cortex-m3 -mthumb -mthumb-interwork -fno-builtin
 

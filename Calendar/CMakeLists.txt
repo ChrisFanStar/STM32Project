@@ -1,4 +1,4 @@
-#THIS FILE IS AUTO GENERATED FROM THE TEMPLATE! DO NOT CHANGE!
+# THIS FILE IS AUTO GENERATED FROM THE TEMPLATE! DO NOT CHANGE!
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_VERSION 1)
 cmake_minimum_required(VERSION 3.28)
@@ -18,59 +18,74 @@ project(Calendar C CXX ASM)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_C_STANDARD 11)
 
-#Uncomment for hardware floating point
-#add_compile_definitions(ARM_MATH_CM4;ARM_MATH_MATRIX_CHECK;ARM_MATH_ROUNDING)
+# !!! 强制使用最小体积优化（覆盖原有配置）
+add_compile_options(-Os)  # 优先级高于 -Ofast/-Og
+add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length=0)
+add_compile_options(-fno-unwind-tables -fno-asynchronous-unwind-tables)  # !!! 减少异常处理开销
+
+# !!! 启用链接时优化（LTO）
+add_compile_options(-flto)
+add_link_options(-flto)
+
+# Hardware/Software FPU (disabled by default for F103C8T6)
 #add_compile_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
 #add_link_options(-mfloat-abi=hard -mfpu=fpv4-sp-d16)
 
-#Uncomment for software floating point
-#add_compile_options(-mfloat-abi=soft)
-
+# MCU-specific options
 add_compile_options(-mcpu=cortex-m3 -mthumb -mthumb-interwork)
-add_compile_options(-ffunction-sections -fdata-sections -fno-common -fmessage-length=0)
-
-# uncomment to mitigate c++17 absolute addresses warnings
-#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-register")
+add_link_options(-mcpu=cortex-m3 -mthumb -mthumb-interwork)
 
 # Enable assembler files preprocessing
 add_compile_options($<$<COMPILE_LANGUAGE:ASM>:-x$<SEMICOLON>assembler-with-cpp>)
 
-if ("${CMAKE_BUILD_TYPE}" STREQUAL "Release")
-    message(STATUS "Maximum optimization for speed")
-    add_compile_options(-Ofast)
-elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "RelWithDebInfo")
-    message(STATUS "Maximum optimization for speed, debug info included")
-    add_compile_options(-Ofast -g)
-elseif ("${CMAKE_BUILD_TYPE}" STREQUAL "MinSizeRel")
-    message(STATUS "Maximum optimization for size")
-    add_compile_options(-Os)
+# !!! 精简调试信息（保留必要符号）
+if ("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
+    add_compile_options(-g1)  # !!! 使用 -g1 替代 -g
 else ()
-    message(STATUS "Minimal optimization, debug info included")
-    add_compile_options(-Og -g)
+    add_compile_options(-fno-builtin)  # !!! 禁用内置函数
 endif ()
 
-include_directories(Core/Inc Drivers/STM32F1xx_HAL_Driver/Inc/Legacy Drivers/STM32F1xx_HAL_Driver/Inc Drivers/CMSIS/Device/ST/STM32F1xx/Include Drivers/CMSIS/Include App/Inc Lib/Inc)
+# Include directories
+include_directories(
+        Core/Inc
+        Drivers/STM32F1xx_HAL_Driver/Inc/Legacy
+        Drivers/STM32F1xx_HAL_Driver/Inc
+        Drivers/CMSIS/Device/ST/STM32F1xx/Include
+        Drivers/CMSIS/Include
+        App/Inc
+        Lib/Inc
+)
 
-add_definitions(-DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB)
+# !!! 禁用未使用的 HAL 模块
+add_definitions(
+        -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103xB
+        -DHAL_ADC_MODULE_DISABLED  # !!! 示例：禁用 ADC
+        -DHAL_CAN_MODULE_DISABLED  # !!! 根据实际需求调整
+)
+
+# !!! 使用 newlib-nano 标准库
+add_definitions(--specs=nano.specs)
+link_libraries(c_nano nosys)  # !!! 替换原有的 `c nosys`
 
 file(GLOB_RECURSE SOURCES "App/*.*" "Core/*.*" "Drivers/*.*" "Lib/*.*")
-
 set(LINKER_SCRIPT ${CMAKE_SOURCE_DIR}/STM32F103C8TX_FLASH.ld)
 
-add_link_options(-Wl,-gc-sections,--print-memory-usage,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map)
-add_link_options(-mcpu=cortex-m3 -mthumb -mthumb-interwork)
-add_link_options(-T ${LINKER_SCRIPT})
+# !!! 链接器优化：清除未使用段 + 最小内存占用
+add_link_options(
+        -Wl,--gc-sections
+        -Wl,--print-memory-usage
+        -Wl,-Map=${PROJECT_BINARY_DIR}/${PROJECT_NAME}.map
+        -T ${LINKER_SCRIPT}
+)
 
 add_executable(${PROJECT_NAME}.elf ${SOURCES} ${LINKER_SCRIPT})
 
 set(HEX_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.hex)
 set(BIN_FILE ${PROJECT_BINARY_DIR}/${PROJECT_NAME}.bin)
 
-add_definitions(-DUSE_FULL_LL_DRIVER)
-link_libraries(c nosys)  # 启用Newlib标准库
-
-add_custom_command(TARGET ${PROJECT_NAME}.elf POST_BUILD
+add_custom_command(
+        TARGET ${PROJECT_NAME}.elf POST_BUILD
         COMMAND ${CMAKE_OBJCOPY} -Oihex $<TARGET_FILE:${PROJECT_NAME}.elf> ${HEX_FILE}
         COMMAND ${CMAKE_OBJCOPY} -Obinary $<TARGET_FILE:${PROJECT_NAME}.elf> ${BIN_FILE}
-        COMMENT "Building ${HEX_FILE}
-Building ${BIN_FILE}")
+        COMMENT "Generating ${HEX_FILE} and ${BIN_FILE}"
+)

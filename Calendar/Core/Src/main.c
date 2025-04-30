@@ -95,7 +95,7 @@ int main(void)
   MX_TIM1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-//  MainTaskInit();
+  MainTaskInit();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -130,13 +130,13 @@ int main(void)
 //OLED_Showdecimal(0,4,num1,3,2,12, 0);
 //OLED_Showdecimal(0,6,num2,2,3,16, 1);
 
-    printf("Counter: %ld\r\n", 112);
+
 
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-//      MainTask();
-      printf("Counter: %ld\r\n", 112);
+      MainTask();
+
 
       /* USER CODE BEGIN 3 */
   }
