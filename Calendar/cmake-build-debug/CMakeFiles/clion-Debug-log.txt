@@ -8,7 +8,6 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- Minimal optimization, debug info included
 -- Configuring done (0.0s)
 You have changed variables that require your cache to be deleted.
 Configure will be re-run and you may have to reset some variables.
@@ -39,7 +38,6 @@ CMake Deprecation Warning:
 -- Check for working CXX compiler: /opt/homebrew/bin/arm-none-eabi-g++ - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Minimal optimization, debug info included
--- Configuring done (0.5s)
+-- Configuring done (0.6s)
 -- Generating done (0.0s)
 -- Build files have been written to: /Users/fanjia/Desktop/fanjia_file/my_code/workspace/stm32_workspace/STM32Project/Calendar/cmake-build-debug

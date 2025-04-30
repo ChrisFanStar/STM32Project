@@ -5,6 +5,9 @@
  *      Author: Unicorn_Li
  */
 #include "oled.h"
+#include "string.h"
+
+#define OLED_I2C_ADDRESS 0x78
 
 /**********************************************************
  * 初始化命令,根据芯片手册书写，详细步骤见上图以及注意事项
@@ -205,7 +208,7 @@ void OLED_ShowChar(uint8_t x,uint8_t y,uint8_t chr,uint8_t Char_Size,uint8_t Col
  * @param {uint8_t} Color_Turn是否反相显示(1反相、0不反相)
  * @return {*}
  */
-void OLED_ShowString(uint8_t x,uint8_t y,char*chr,uint8_t Char_Size, uint8_t Color_Turn)
+void OLED_ShowString(uint8_t x,uint8_t y,const char* chr,uint8_t Char_Size, uint8_t Color_Turn)
 {
     uint8_t  j=0;
     while (chr[j]!='\0')
@@ -475,4 +478,37 @@ void OLED_IntensityControl(uint8_t intensity)
     OLED_WR_CMD(intensity);
 }
 
+
+uint8_t OLED_Buffer[1024]; // 128 x 64 = 1024 字节（1字节=8像素）
+
+void OLED_NewFrame() {
+    memset(OLED_Buffer, 0x00, sizeof(OLED_Buffer)); // 清空缓冲区
+}
+
+void OLED_WriteCommand(uint8_t cmd) {
+    uint8_t data[2];
+    data[0] = 0x00;     // 控制字节：0x00 表示后面是命令
+    data[1] = cmd;
+    HAL_I2C_Master_Transmit(&hi2c1, OLED_I2C_ADDRESS, data, 2, HAL_MAX_DELAY);
+}
+
+void OLED_WriteData(uint8_t dataByte) {
+    uint8_t data[2];
+    data[0] = 0x40;       // 控制字节 0x40 表示后面是“数据”
+    data[1] = dataByte;
+    HAL_I2C_Master_Transmit(&hi2c1, OLED_I2C_ADDRESS, data, 2, HAL_MAX_DELAY);
+}
+
+
+void OLED_ShowFrame() {
+    for (uint8_t page = 0; page < 8; page++) {
+        OLED_WriteCommand(0xB0 + page);            // 设置页地址（0~7）
+        OLED_WriteCommand(0x00);                   // 设置低列地址
+        OLED_WriteCommand(0x10);                   // 设置高列地址
+
+        for (uint8_t col = 0; col < 128; col++) {
+            OLED_WriteData(OLED_Buffer[page * 128 + col]); // 写入当前页的列数据
+        }
+    }
+}
 
